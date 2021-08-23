@@ -1,0 +1,30 @@
+<div class="appareil-view">
+
+<h2>Etat des appareils</h2>
+<ul class="list-group">
+  <app-appareil  *ngFor="let appareil of appareils; let i = index"
+                 [appareilName]="appareil.name"
+                 [appareilStatus]="appareil.status" 
+                 [index]="i"
+                 [id]="appareil.id"></app-appareil>
+</ul>
+
+<h2>Mes appareils</h2>
+<p>Mis à jour : {{ lastUpdate | async }}</p>
+
+<button class="btn btn-success"
+        (click)="onAllumer()">Tout allumer</button>
+<button class="btn btn-danger"
+        (click)="onEteindre()">Tout éteindre</button>
+        
+ </div>
+
+
+
+
+
+
+ <!-- =======================================================
+  * Author: Boujjou Achraf
+  * License: https://www.linkedin.com/in/achrafboujjou/
+  ======================================================== -->

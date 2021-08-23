@@ -1,0 +1,71 @@
+<div class="row" id="row">
+  <div class="col-sm-8 col-sm-offset-2">
+
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+
+<div class="form-group">
+  
+<label for="name">
+  <mat-form-field appearance="fill">
+    <mat-label>Nom de l'appareil</mat-label>
+    <input matInput id="name" name="name" ngModel required>
+  </mat-form-field>
+</label>
+
+</div>
+
+<div class="form-group">
+
+<label for="status">
+  <mat-form-field appearance="fill" id="status" name="status" [ngModel]="defaultOnOff" required>
+    <mat-label>État de l'appareil</mat-label>
+    <mat-select>
+      <mat-option value="allumé">Allumé</mat-option>
+      <mat-option value="éteint">Éteint</mat-option>
+    </mat-select>
+    <mat-hint>Par default : Éteint</mat-hint>
+  </mat-form-field>
+</label>
+
+</div>
+
+<button mat-raised-button color="primary" type="submit" [disabled]="f.invalid" class="btnEnregistrer">Enregistrer</button>
+
+</form>
+
+  </div>
+</div>
+
+<!-- une 2eme template -->
+
+<!-- <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="form-group">
+          <label for="name">
+            Nom de l'appareil
+          </label>
+          <input type="text" id="name" class="form-control" name="name" ngModel required>
+        </div>
+        <div class="form-group">
+          <label for="status">
+            État de l'appareil
+          </label>
+          <select id="status" class="form-control" name="status" [ngModel]="defaultOnOff">
+            <option value="allumé">Allumé</option>
+            <option value="éteint">Éteint</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" type="submit" [disabled]="f.invalid">Enregistrer</button>
+      </form>
+    </div>
+  </div> -->
+
+
+
+
+
+  <!-- =======================================================
+  * Author: Boujjou Achraf
+  * License: https://www.linkedin.com/in/achrafboujjou/
+  ======================================================== -->
