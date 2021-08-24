@@ -22,6 +22,7 @@ import { NewUserComponent } from './new-user/new-user.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { HttpClientModule } from '@angular/common/http';
 
 export const routes: Routes = [
  
@@ -57,7 +58,8 @@ export const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,   
-    MaterialModule, 
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [
     AppareilsService,
